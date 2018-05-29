@@ -109,11 +109,11 @@ export default {
       this.context.lineWidth = 3;
       this.context.strokeStyle = 'white';
 
-      for (var i = 0; i < this.rows; i++) {
-        for (var j = 0; j < this.columns; j++) {
-          var x = j * 60;
-          var y = i * 60;
-          this.context.rect(x, y, 60, 60);
+      for (var i = 0; i < 30; i++) {
+        for (var j = 0; j < 30; j++) {
+          var x = j * 20;
+          var y = i * 20;
+          this.context.rect(x, y, 20, 20);
           this.context.fill();
           this.context.stroke();
         }
@@ -177,7 +177,7 @@ export default {
         for (var j = 0; j < this.drawedLine[i].length; j++) {
           var x = this.drawedLine[i][0]
           var y = this.drawedLine[i][1]
-          this.context.clearRect(x*60,y*60,60,60)
+          this.context.clearRect(x*20,y*20,20,20)
         }
       }
     }
