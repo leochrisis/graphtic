@@ -37,12 +37,41 @@ export default {
           this.context.stroke();
         }
       }
+      this.drawCircle()
     },
 
     drawCircle () {
+      this.radius = parseInt(this.radius)
+     
+      var x0 = 7
+      var y0 = 7
+      var x = this.radius
+      var y = 0
+      var radiusError = 1 - x
+
+      while (x >= y) {
+        this.drawPixel(x + x0, y + y0)
+        this.drawPixel(y + x0, x + y0)
+        this.drawPixel(-x + x0, y + y0)
+        this.drawPixel(-y + x0, x + y0)
+        this.drawPixel(-x + x0, -y + y0)
+        this.drawPixel(-y + x0, -x + y0)
+        this.drawPixel(x + x0, -y + y0)
+        this.drawPixel(y + x0, -x + y0)
+        y++
+
+        if (radiusError < 0) {
+          radiusError += 2*x + 3
+        } else {
+          x--
+          radiusError += 2*x - 2*y + 5
+        }
+      }
     },
 
     drawPixel(x, y) {
+      this.context.clearRect(x*20,y*20,20,20)
+    }
   }
 }
 </script>
