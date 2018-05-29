@@ -8,8 +8,14 @@
         <div class="container has-text-centered">
           <p class="subtitle has-text-grey">Algoritmos implementados</p>
           <div class="column is-4 is-offset-4">
-            <div class="box"> 
-              <router-link to="/bresenham" class="button is-link is-rounded">Bresenham</router-link>          
+            <div class="box">
+              <div>
+                <router-link to="/bresenham" class="button is-link is-rounded">Bresenham</router-link>
+              </div>
+              <br/>
+              <div>
+                <router-link to="/circle" class="button is-link is-rounded">Círculo</router-link>
+              </div>         
             </div>      
           </div>
         </div>
