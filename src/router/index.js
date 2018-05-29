@@ -20,7 +20,7 @@ export default new Router({
     },
     {
       path: '/circle',
-      name: 'Circle',
+      name: 'Point Circle',
       component: Circle
     }
   ]

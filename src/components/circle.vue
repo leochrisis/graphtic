@@ -8,7 +8,7 @@
 import Navbar from './navbar.vue'
 
 export default {
-  name: 'Circle',
+  name: 'PointCircle',
 
   components: { Navbar }
 }
