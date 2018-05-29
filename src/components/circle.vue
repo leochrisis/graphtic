@@ -1,6 +1,28 @@
 <template>
   <div>
     <navbar class="is-primary"></navbar>
+    <div class="columns">
+      <div class="column is-two-thirds is-offset-2">
+       <div class="field">
+          <label>Raio do círculo</label>
+          <div class="control">
+            <input 
+              class="input" 
+              type="number" 
+              placeholder="Raio do círculo" 
+              v-model="radius"
+            >
+          </div>
+          <a class="button is-link" @click="drawGrid">Rodar</a>
+        </div>
+        <canvas
+          ref="el" 
+          width="700" 
+          height="700"
+        >  
+        </canvas>
+      </div>
+    </div>
   </div>
 </template>
 
